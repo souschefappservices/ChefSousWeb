@@ -1,45 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SousChef</title>
-  <style>
-    body {
-      font-family: -apple-system, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-    .container {
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #cbd5f5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #22c55e;
-      color: black;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Chef Sous App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/sc.png" type="image/png">
+  <link rel="icon" href="images/sc.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <h1>🍳 Sous Chef</h1>
-    <p>Your smart cooking companion</p>
 
-    <a class="btn" href="#">Download on the App Store</a>
+<body>
+<script>
+  const CONFIG = {
+    comingSoon: true // set to false to enable full site
+  };
+</script>
+
+<!-- HERO (Parallax) -->
+<section class="parallax hero">
+  <div class="content">
+    <img src="images/sc.png" alt="Chef Sous Logo" class="logo">
+    <h1>Chef Sous</h1>
+    <p id="heroSubtitle">The joy of cooking</p>
+    <p id="comingSoonText" style="display:none;">Coming soon</p>
+    <a href="#" class="appstore-btn" id="downloadBtn"><img src="images/download.svg" alt="Download"></a>
   </div>
+</section>
+
+<div id="featuresSection"><!-- FEATURES -->
+<section class="section features" data-aos="fade-up">
+  <div class="features-content">
+    <h2>Your recipes, your way</h2>
+    <p>Plan meals, manage recipes, and cook smiling.</p>
+  </div>
+
+  <img src="images/pretzel.png" alt="" class="features-bg-image">
+</section>
+</div>
+
+<!-- PARALLAX BREAK -->
+<section class="parallax mid"></section>
+
+<div id="carouselSection"><!-- SCREENSHOT CAROUSEL -->
+<section class="section" data-aos="fade-up">
+  <h2>at your fingertips</h2>
+
+  <div class="carousel">
+    <button class="nav prev">&#10094;</button>
+
+    <div class="carousel-track">
+      <div class="phone">
+        <img src="images/app-previews/preview1.png" alt="App preview 1">
+      </div>
+      <div class="phone">
+        <img src="images/app-previews/preview2.png" alt="App preview 2">
+      </div>
+      <div class="phone">
+        <img src="images/app-previews/preview3.png" alt="App preview 3">
+      </div>
+      <div class="phone">
+        <img src="images/app-previews/preview4.png" alt="App preview 4">
+      </div>
+    </div>
+
+    <button class="nav next">&#10095;</button>
+  </div>
+</section>
+</div>
+
+<!-- CTA -->
+<section class="parallax footer">
+  <div class="content">
+    <h2>"What's for dinner?"</h2>
+    <a href="#" class="appstore-btn" id="downloadBtnFooter"><img src="images/download.svg" alt="Download"></a>
+  </div>
+  <div class="madeby-note">
+    <p>Proudly made by</p>
+    <img src="images/family.png" alt="Australian family" class="madeby-img">
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: false,
+    mirror: true
+  });
+</script>
+
+<script>
+  if (CONFIG.comingSoon) {
+    // Hide download buttons
+    document.getElementById("downloadBtn")?.style.setProperty("display", "none");
+    document.getElementById("downloadBtnFooter")?.style.setProperty("display", "none");
+
+    // Hide sections
+    document.getElementById("featuresSection")?.style.setProperty("display", "none");
+    document.getElementById("carouselSection")?.style.setProperty("display", "none");
+
+    // Show "Coming Soon"
+    document.getElementById("heroSubtitle")?.style.setProperty("display", "none");
+    document.getElementById("comingSoonText")?.style.setProperty("display", "block");
+  }
+</script>
+
 </body>
 </html>
