@@ -62,7 +62,6 @@ body {
   background-image: url('images/baking.jpg');
   flex-direction: column;
   gap: 1.5rem;
-  padding-bottom: 2rem;
 }
 
 .footer .content {
@@ -255,10 +254,15 @@ body {
 .prev { left: 4px; }
 .next { right: 4px; }
 
+.madeby-section {
+  background: #508e21;
+  padding: 28px 20px;
+}
+
 .madeby-note {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
@@ -271,6 +275,35 @@ body {
   font-size: 1rem;
 }
 
+.madeby-item {
+  min-width: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link {
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-size: 1rem;
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
 .madeby-img {
   width: 60px;
   height: 60px;
@@ -278,4 +311,107 @@ body {
   border-radius: 50%;
   box-shadow: 0 14px 30px rgba(0,0,0,0.2);
   border: 3px solid rgba(255,255,255,0.9);
+}
+
+.terms-page {
+  min-height: 100vh;
+  background: #f7f3ec;
+  color: #2f2a24;
+}
+
+.terms-header {
+  padding: 24px;
+}
+
+.terms-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #2f2a24;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.terms-brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.terms-main {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: 28px 0 80px;
+}
+
+.terms-hero {
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(47,42,36,0.16);
+}
+
+.terms-kicker {
+  margin-bottom: 8px;
+  color: #7a4d2f;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.terms-hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.75rem);
+  line-height: 1.04;
+  margin-bottom: 14px;
+}
+
+.terms-hero p:last-child {
+  color: #665c52;
+  font-size: 1.1rem;
+}
+
+.terms-content {
+  font-size: 1.05rem;
+}
+
+.terms-content h2 {
+  margin: 36px 0 10px;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.terms-content p,
+.terms-content li {
+  color: #4d463f;
+}
+
+.terms-content p {
+  margin-bottom: 16px;
+}
+
+.terms-content ul {
+  margin: 0 0 18px 1.3rem;
+}
+
+.terms-content li {
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.terms-content a {
+  color: #7a4d2f;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .terms-header {
+    padding: 18px 20px;
+  }
+
+  .terms-main {
+    width: min(100% - 32px, 920px);
+    padding-top: 18px;
+  }
 }
