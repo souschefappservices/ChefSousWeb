@@ -37,12 +37,23 @@ body {
 /* PARALLAX */
 .parallax {
   height: 100vh;
+  min-height: 100svh;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.smooth-scroll-backgrounds .parallax {
+  background-attachment: scroll;
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 .hero {
