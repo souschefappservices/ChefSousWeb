@@ -218,7 +218,7 @@ a {
 
 .phone-frame {
   width: min(100%, 238px);
-  aspect-ratio: 0.462;
+  aspect-ratio: 9 / 19.8;
   padding: 8px;
   background: #111;
   border-radius: 34px;
@@ -229,12 +229,13 @@ a {
 .phone-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f8f1e8;
   border-radius: 27px;
 }
 
 .hero-phone {
-  width: min(56vw, 310px);
+  width: min(56vw, 330px);
   transform: rotate(2deg);
 }
 
@@ -512,15 +513,6 @@ a {
   margin-bottom: 40px;
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(47,42,36,0.16);
-}
-
-.terms-kicker {
-  margin-bottom: 8px;
-  color: #7a4d2f;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .terms-hero h1 {
