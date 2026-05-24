@@ -329,74 +329,23 @@ a {
 }
 
 .feature-icon {
-  position: relative;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   margin-bottom: 18px;
-  color: transparent;
+  color: var(--green);
 }
 
-.feature-icon::before,
-.feature-icon::after {
-  content: "";
-  position: absolute;
-  border: 2px solid var(--green);
-}
-
-.feature-icon::before {
-  inset: 10px 4px 8px;
-  border-radius: 8px;
-}
-
-.feature-icon::after {
-  width: 18px;
-  height: 10px;
-  left: 13px;
-  top: 3px;
-  border-bottom: 0;
-  border-radius: 12px 12px 0 0;
-}
-
-.pot-icon::before {
-  inset: 14px 5px 9px;
-  border-radius: 50% 50% 44% 44%;
-}
-
-.pot-icon::after {
-  width: 28px;
-  height: 10px;
-  left: 8px;
-  top: 9px;
-  border-radius: 50%;
-}
-
-.scan-icon::before {
-  inset: 6px;
-  border-style: dashed;
-  border-radius: 4px;
-}
-
-.scan-icon::after {
-  width: 20px;
-  height: 18px;
-  left: 12px;
-  top: 13px;
-  border-radius: 2px;
-}
-
-.lock-icon::before {
-  inset: 18px 8px 7px;
-  border-radius: 5px;
-}
-
-.lock-icon::after {
-  width: 16px;
-  height: 16px;
-  left: 14px;
-  top: 7px;
-  border-bottom: 0;
-  border-radius: 12px 12px 0 0;
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .feature-item h3 {
