@@ -216,15 +216,6 @@ a {
   place-items: center;
 }
 
-.phone-frame {
-  width: min(100%, 238px);
-  aspect-ratio: 9 / 20.8;
-  padding: 10px 10px 18px;
-  background: #111;
-  border-radius: 40px;
-  box-shadow: 0 28px 70px rgba(23, 20, 16, 0.28);
-  overflow: hidden;
-}
 
 .phone-frame img {
   width: 100%;
@@ -232,6 +223,7 @@ a {
   object-fit: cover;
   background: #f8f1e8;
   border-radius: 30px;
+  border: 3px solid #111;
 }
 
 .hero-phone {
@@ -620,25 +612,11 @@ a {
     transform: none;
   }
 
-  .phone-frame {
-    border-radius: 28px;
-    padding: 7px 7px 12px;
-  }
-
-  .phone-frame img {
-    border-radius: 22px;
-  }
-
   .feature-band {
     grid-template-columns: 1fr;
     padding: 24px 20px;
   }
 
-  .feature-item,
-  .feature-item:nth-child(2) {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
 
   .feature-item:last-child {
     border-bottom: 0;
