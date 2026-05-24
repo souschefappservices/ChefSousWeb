@@ -6,131 +6,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/sc.png" type="image/png">
   <link rel="icon" href="images/sc.png" type="image/png">
-  <script>
-    const userAgent = navigator.userAgent;
-    const isSafari = userAgent.includes('Safari') && !userAgent.includes('Chrome') && !userAgent.includes('Chromium');
-    const isIOSWebKit = /iPad|iPhone|iPod/.test(userAgent);
-
-    if (isSafari || isIOSWebKit) {
-      document.documentElement.classList.add('smooth-scroll-backgrounds');
-    }
-  </script>
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-<script>
-  const CONFIG = {
-    comingSoon: true // set to false to enable full site
-  };
-</script>
+<body class="home-page">
+  <header class="site-header" aria-label="Chef Sous navigation">
+    <a href="index.html" class="brand-mark" aria-label="Chef Sous home">
+      <img src="images/sc.png" alt="Chef Sous Logo">
+      <span>Chef Sous</span>
+    </a>
+    <nav class="site-nav" aria-label="Footer pages">
+      <a href="mailto:contact@chefsous.app">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
 
-<!-- HERO (Parallax) -->
-<section class="parallax hero">
-  <div class="content">
-    <img src="images/sc.png" alt="Chef Sous Logo" class="logo">
-    <h1>Chef Sous</h1>
-    <p id="heroSubtitle">The joy of cooking</p>
-    <p id="comingSoonText" style="display:none;">Coming soon</p>
-    <a href="#" class="appstore-btn" id="downloadBtn"><img src="images/download.svg" alt="Download"></a>
-  </div>
-</section>
-
-<div id="featuresSection"><!-- FEATURES -->
-<section class="section features" data-aos="fade-up">
-  <div class="features-content">
-    <h2>Your recipes, your way</h2>
-    <p>Plan meals, manage recipes, and cook smiling.</p>
-  </div>
-
-  <img src="images/pretzel.png" alt="" class="features-bg-image">
-</section>
-</div>
-
-<!-- PARALLAX BREAK -->
-<section class="parallax mid"></section>
-
-<div id="carouselSection"><!-- SCREENSHOT CAROUSEL -->
-<section class="section" data-aos="fade-up">
-  <h2>at your fingertips</h2>
-
-  <div class="carousel">
-    <button class="nav prev">&#10094;</button>
-
-    <div class="carousel-track">
-      <div class="phone">
-        <img src="images/app-previews/preview1.png" alt="App preview 1">
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <img src="images/sc.png" alt="" class="hero-icon">
+        <h1>Chef Sous</h1>
+        <p>Your private recipe book for everyday cooking.</p>
+        <a href="mailto:contact@chefsous.app" class="primary-cta">Coming soon</a>
       </div>
-      <div class="phone">
-        <img src="images/app-previews/preview2.png" alt="App preview 2">
+
+      <div class="hero-preview" aria-label="Chef Sous app preview">
+        <div class="phone-frame hero-phone">
+          <img src="images/app-previews/preview1.png" alt="Chef Sous recipe book preview">
+        </div>
+        <div class="hero-ingredients" aria-hidden="true">
+          <img src="images/pretzel.png" alt="">
+        </div>
       </div>
-      <div class="phone">
-        <img src="images/app-previews/preview3.png" alt="App preview 3">
+    </section>
+
+    <section class="preview-section" aria-labelledby="preview-title">
+      <div class="section-copy">
+        <h2 id="preview-title"><span>All your recipes.</span><span>Always in <br>your kitchen.</span></h2>
+        <p>Save the recipes you love, cook with confidence, and keep everything just for you.</p>
       </div>
-      <div class="phone">
-        <img src="images/app-previews/preview4.png" alt="App preview 4">
+
+      <div class="preview-rail">
+        <div class="phone-frame">
+          <img src="images/app-previews/preview1.png" alt="Saved recipes in Chef Sous">
+        </div>
+        <div class="phone-frame raised-phone">
+          <img src="images/app-previews/preview2.png" alt="Recipe detail in Chef Sous">
+        </div>
+        <div class="phone-frame">
+          <img src="images/app-previews/preview3.png" alt="Cooking steps in Chef Sous">
+        </div>
+        <div class="phone-frame lowered-phone">
+          <img src="images/app-previews/preview4.png" alt="Recipe import in Chef Sous">
+        </div>
       </div>
+    </section>
+
+    <section class="feature-band" aria-label="Chef Sous features">
+      <article class="feature-item">
+        <span class="feature-icon" aria-hidden="true">□</span>
+        <h3>Save recipes with photos</h3>
+        <p>Add your favorite recipes and food photos all in one place.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon pot-icon" aria-hidden="true">□</span>
+        <h3>Cook step by step</h3>
+        <p>Follow each step clearly while you cook, prep, and plate.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon scan-icon" aria-hidden="true">□</span>
+        <h3>Import recipes from images</h3>
+        <p>Snap a recipe and turn it into something you can cook from.</p>
+      </article>
+      <article class="feature-item">
+        <span class="feature-icon lock-icon" aria-hidden="true">□</span>
+        <h3>Keep recipes private</h3>
+        <p>Your recipes and photos stay private and stored for you.</p>
+      </article>
+    </section>
+
+    <section class="closing-section">
+      <div class="family-photo" aria-hidden="true"></div>
+      <div class="closing-copy">
+        <h2>Built for real kitchens and real life.</h2>
+        <p>Chef Sous is coming soon.</p>
+      </div>
+      <div class="closing-contact">
+        <p>Get in touch</p>
+        <a href="mailto:contact@chefsous.app">contact@chefsous.app</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="index.html" class="footer-brand">
+      <img src="images/sc.png" alt="Chef Sous Logo">
+      <span>Chef Sous</span>
+    </a>
+    <div class="footer-links">
+      <a href="mailto:contact@chefsous.app">Contact</a>
+      <a href="terms.html">Terms and Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
+  </footer>
 
-    <button class="nav next">&#10095;</button>
-  </div>
-</section>
-</div>
-
-<!-- CTA -->
-<section class="parallax footer">
-  <div class="content">
-    <h2>"What's for dinner?"</h2>
-    <a href="#" class="appstore-btn" id="downloadBtnFooter"><img src="images/download.svg" alt="Download"></a>
-  </div>
-</section>
-
-<section class="madeby-section">
-  <div class="madeby-note">
-    <div class="madeby-item">
-      <p>Proudly made by</p>
-      <img src="images/family.png" alt="Australian family" class="madeby-img">
-    </div>
-    <div class="madeby-item">
-      <a href="mailto:contact@chefsous.app" class="footer-link">Contact us<img src="images/contact.png" alt="Email" class="email-icon"></a>
-    </div>
-    <div class="madeby-item">
-      <a href="terms.html" class="footer-link">Terms and Conditions</a>
-    </div>
-    <div class="madeby-item">
-      <a href="privacy.html" class="footer-link">Privacy Policy</a>
-    </div>
-  </div>
-</section>
-
-<script src="script.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    easing: 'ease-in-out',
-    once: false,
-    mirror: true
-  });
-</script>
-
-<script>
-  if (CONFIG.comingSoon) {
-    // Hide download buttons
-    document.getElementById("downloadBtn")?.style.setProperty("display", "none");
-    document.getElementById("downloadBtnFooter")?.style.setProperty("display", "none");
-
-    // Hide sections
-    document.getElementById("featuresSection")?.style.setProperty("display", "none");
-    document.getElementById("carouselSection")?.style.setProperty("display", "none");
-
-    // Show "Coming Soon"
-    document.getElementById("heroSubtitle")?.style.setProperty("display", "none");
-    document.getElementById("comingSoonText")?.style.setProperty("display", "block");
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
